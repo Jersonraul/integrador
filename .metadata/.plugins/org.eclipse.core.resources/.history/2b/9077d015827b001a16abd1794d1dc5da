@@ -1,0 +1,37 @@
+package com.cibertec.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="coronavirus")
+public class coronavirus {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="idcoronavirus")
+	private int codCorona;
+	@Column(name="nombre")
+	private String nomCorona;
+	
+	public int getCodCorona() {
+		return codCorona;
+	}
+	public void setCodCorona(int codCorona) {
+		this.codCorona = codCorona;
+	}
+	public String getNomCorona() {
+		return nomCorona;
+	}
+	public void setNomCorona(String nomCorona) {
+		this.nomCorona = nomCorona;
+	}
+	
+	
+	
+
+}
